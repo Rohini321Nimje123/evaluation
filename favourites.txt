@@ -1,0 +1,29 @@
+// write js code here corresponding to favourites.html
+
+var favourites = JSON.parse(localStorage.getItem("favourite"))
+  var tbody = document.querySelector("tbody")
+
+  favourites.forEach(element => {
+    var tr = document.createElement("tr")
+
+  var td1 = document.createElement("td")
+  td1.innerText = element.matchNum
+
+  var td2 = document.createElement("td")
+  td2.innerText = element.teamA
+
+  var td3 = document.createElement("td")
+  td3.innerText = element.teamB
+
+  var td4 = document.createElement("td")
+  td4.innerText = element.date
+
+  var td5 = document.createElement("td")
+  td5.innerText = element.venue
+
+  tr.append(td1,td2,td3,td4,td5)
+  tbody.append(tr)
+
+  });
+  
+
